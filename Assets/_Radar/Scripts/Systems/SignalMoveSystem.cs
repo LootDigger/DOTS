@@ -1,5 +1,5 @@
 using Unity.Entities;
-using Radar.Emitter;
+using Radar.Emitters;
 using Unity.Transforms;
 
 namespace Radar.Systems

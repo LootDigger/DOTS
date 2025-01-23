@@ -1,17 +1,17 @@
+using Radar.Services;
 using UnityEngine;
 
 namespace Radar.Controllers
 {
     public class GameManager : MonoBehaviour
     {
-       [SerializeField] private GameObject _gameViewGameObject;
        private IGameView _gameView;
 
-       private void Awake() => InitGameView();
+       private void Awake() => ConnectGameView();
 
-       private void InitGameView()
+       private void ConnectGameView()
        {
-           _gameView = _gameViewGameObject.GetComponent<IGameView>();
+           _gameView = ServiceLocator.GetService<IGameView>();
        }
 
        public void OnGameWinConditionMatched()

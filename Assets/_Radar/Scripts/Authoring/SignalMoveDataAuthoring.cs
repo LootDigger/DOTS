@@ -1,10 +1,9 @@
-using Radar.Extensions;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-namespace Radar.Emitter
+namespace Radar.Emitters
 {
     public struct SignalMoveDataComponent : IComponentData
     {

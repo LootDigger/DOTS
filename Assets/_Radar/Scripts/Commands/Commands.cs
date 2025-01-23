@@ -1,4 +1,5 @@
-using Radar.Emitter;
+using Radar.Emitters;
+using Radar.Emitters;
 using Radar.Receiver;
 using Unity.Entities;
 using Unity.Mathematics;

@@ -1,3 +1,4 @@
+using Radar.Services;
 using Radar.UI;
 using UnityEngine;
 
@@ -14,8 +15,17 @@ namespace Radar.Controllers
         [SerializeField] private BaseScreen _winScreen;
         private BaseScreen _currentScreen;
 
-        void Start() => HideWinScreen();
-        
+        private void Awake()
+        {
+            InitService();
+            HideWinScreen();
+        }
+
+        private void InitService()
+        {
+            ServiceLocator.RegisterService<IGameView>(this);
+        }
+
         public void ShowScreen(BaseScreen screen, bool isAdditive = false)
         {
             if(!isAdditive && _currentScreen != null)

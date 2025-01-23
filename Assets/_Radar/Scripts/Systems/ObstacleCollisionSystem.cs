@@ -1,4 +1,4 @@
-using Radar.Emitter;
+using Radar.Emitters;
 using Radar.Obstacles;
 using Radar.Receiver;
 using Unity.Burst;
